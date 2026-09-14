@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: sistema-inventario-equipos
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/inventario_equipos_test?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: false
+
+server:
+  port: 8081
+
+logging:
+  level:
+    root: WARN
+    com.inventario: DEBUG
